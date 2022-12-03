@@ -1,13 +1,13 @@
 from django.shortcuts import render, redirect
 from .models import Article, ArticleImage, Event, EventImage
-import pandas as pd
+# import pandas as pd
 # Create your views here.
 
 def ViewArticles(request,id):
     article = Article.objects.get(id=id)
     print(article)
     images = ArticleImage.objects.all()
-    print(pd.DataFrame(Article.objects.all().values())) 
+    # print(pd.DataFrame(Article.objects.all().values())) 
     return render(request,'news.html',{'article':article, 'images':images})
         
 def ViewEvents(request,id):
