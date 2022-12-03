@@ -1,0 +1,82 @@
+{%load static%}
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/normalize.css'%}">
+    <link rel="stylesheet" href="{% static 'css/eco/style.css'%}">
+    <script src="{% static 'js/eco.js' %}" defer></script>
+    <title>Shishka</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header__left">
+                <a href="{%url 'main'%}"><img src="{% static 'images/free-icon-pinecone-66715.png'%}" alt="logo-image"></a>
+            </div>
+            <div class="header__right">
+                <ul class="header__list">
+                    {% comment %} <li class="header__item"><a href="{%url 'articles'%}">Новости</a></li> {% endcomment %}
+                    <li class="header__item"><a href="#placeEcology">Экология</a></li>
+                    {% comment %} <li class="header__item"><a href="#game">Игра</a></li>
+                    <li class="header__item"><a href="#aboutUs">О нас</a></li> {% endcomment %}
+                </ul>
+            </div>
+            <nav>
+                <div class="navbar">
+                <div class="container nav-container">
+                    <input class="checkbox" type="checkbox" name="" id="" />
+                    <div class="hamburger-lines">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </div>  
+                    <div class="menu-items">
+                        {% comment %} <li class="header__item"><a href="#placeNews">Новости</a></li> {% endcomment %}
+                        <li class="header__item"><a href="#placeEcology">Экология</a></li>
+                        {% comment %} <li class="header__item"><a href="#game">Игра</a></li>
+                        <li class="header__item"><a href="#aboutUs">О нас</a></li> {% endcomment %}
+                    </div>
+                </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="main__header">
+                <h1 data-title></h1>
+                <p data-p-introduction></p>
+            </div>
+            <div class="main__body" style="display: flex; flex-direction: column;" data-topics-item-container>
+                <template data-topics-template>
+                    <div>
+                        <div>
+                            <img  
+                                src="" 
+                                alt="image" 
+                                data-img
+                            >
+                        </div>
+                        <div>
+                            <h3 data-title></h3>
+                            <p data-p></p>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer__left"></div>
+        <div class="footer__right"></div>
+    </footer>
+</body>
+</html>
+{%endblock%}

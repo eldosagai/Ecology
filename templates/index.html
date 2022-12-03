@@ -1,0 +1,185 @@
+{%load static%}
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/normalize.css'%}">
+    <link rel="stylesheet" href="{% static 'css/index/style.css'%}">
+    <script src="{% static 'js/index.js' %}" defer></script>
+    <title>Shishka</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header__left">
+                <a href="{%url 'main'%}"><img src="{% static 'images/free-icon-pinecone-66715.png'%}" alt="logo-image"></a>
+            </div>
+            <div class="header__right">
+                <ul class="header__list">
+                    <li class="header__item"><a href="{%url 'main'%}">Главная</a></li>
+                    <li class="header__item"><a href="{%url 'eco'%}">Экология</a></li>
+                    {% comment %} <li class="header__item"><a href="#game">Игра</a></li>
+                    <li class="header__item"><a href="#aboutUs">О нас</a></li> {% endcomment %}
+                </ul>
+            </div>
+            <nav>
+                <div class="navbar">
+                  <div class="container nav-container">
+                      <input class="checkbox" type="checkbox" name="" id="" />
+                      <div class="hamburger-lines">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                      </div>  
+                    <div class="menu-items">
+                        <li class="header__item"><a href="{%url 'main'%}">Главная</a></li>
+                        <li class="header__item"><a href="{%url 'eco'%}">Экология</a></li>
+                        {% comment %} <li class="header__item"><a href="#game">Игра</a></li>
+                        <li class="header__item"><a href="#News">О нас</a></li> {% endcomment %}
+                    </div>
+                  </div>
+                </div>
+              </nav>
+        </div>
+    </header>
+    <main>
+        <section id="placeNews" class="section__slider">
+            <div class="splitview skewed">
+                <div class="panel bottom">
+                    <div class="content">
+                        <img style="height: 100%; width: 100%; object-fit: cover" src="https://sputnik.kg/img/07e5/09/08/1053837603_0:213:3072:1951_1920x0_80_0_0_2335ae80fc7b61ed3898569a366a33af.jpg" alt="Original">
+                    </div>
+                </div>
+                <h1>«Мы в ответе за тех, кого не научили отвечать» <br> Кэтрин Прайс</h1>
+                <div class="panel top">
+                    <div class="content">
+                        <img style="height: 100%; width: 100%; object-fit: cover;" src="https://pibig.info/uploads/posts/2021-05/1620926888_3-pibig_info-p-yelovii-les-letom-priroda-krasivo-foto-3.jpg" alt="Duotone">
+                    </div>
+                </div>
+        
+                <div class="handle"></div>
+            </div>
+        </section>
+        <section id="placeEcology" class="section__ecology">
+            <div class="container">
+                <h1>Экологические проблемы Кыргызстана</h1>
+                <ul class="ecology__list">
+                    <a href="{%url 'eco'%}">
+                        <h3>Засуха</h3>
+                        <li class="ecology__item" data-id="1">
+                            <img src="https://p1.pxfuel.com/preview/960/785/319/field-dry-drought-highland.jpg" alt="ecology-image">
+                            <div>
+                                <h3>Засуха</h3>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="{%url 'eco'%}">
+                        <h3>Повышение/колебание температуры</h3>
+                        <li class="ecology__item" data-id="2">
+                            <img src="https://www.agroinvestor.ru/upload/iblock/96e/96ed474f8b4209d2ed22d39e0010d70f.jpg" alt="ecology-image">
+                            <div>
+                                <h3>Повышение/колебание температуры</h3>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="{%url 'eco'%}">
+                        <h3>Сокращение осадков</h3>
+                        <li class="ecology__item" data-id="3">
+                            <img src="https://kloop.kg/wp-content/uploads/2021/07/1192323.0149a8a635c547b9391de136027a42c3.jpg" alt="ecology-image">
+                            <div>
+                                <h3>Сокращение осадков </h3>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="{%url 'eco'%}">
+                        <h3>Сели и оползни</h3>
+                        <li class="ecology__item" data-id="4">
+                            <img src="https://kloop.kg/wp-content/uploads/2022/04/sel1.jpg" alt="ecology-image">
+                            <div>
+                                <h3>Сели и оползни</h3>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="{%url 'eco'%}">
+                        <h3>Нехватка поливной воды</h3>
+                        <li class="ecology__item" data-id="5">
+                            <img src="https://sputnik.kg/img/07e5/05/08/1052428507_0:310:3072:2048_1920x0_80_0_0_488e96f644ddf4728a95d63cc7f8f5dd.jpg" alt="ecology-image">
+                            <div>
+                                <h3>Нехватка поливной воды</h3>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="{%url 'eco'%}">
+                        <h3>Деградация земель и пастбищ</h3>
+                        <li class="ecology__item" data-id="6">
+                            <img src="https://livingasia.online/wp-content/uploads/2020/09/01-pastbishe_2020-11-1024x683.jpg" alt="ecology-image">
+                            <div>
+                                <h3>Деградация земель и пастбищ</h3>
+                            </div>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+        </section>
+        <section id="game" class="section__game">
+            <div class="container">
+                <h2>Мероприятия по спасению экологии</h2>
+                <ul class="section__event_list">
+                    {%for event in events%}
+                    <a class="event__list_link" href="/events/{{event.id}}">
+                        <li class="event__list_item">
+                            <div>
+                                <img style="height: 200px; object-position: top" src="{{event.image.url}}" alt="event-img">
+                                <h4>{{event.name}}</h4>
+                                <p>
+                                    {{event.text}}
+                                </p>
+                                <div>
+                                    <span>
+                                        {{event.date}}
+                                    </span>
+                                    <span>
+                                        {{event.organization}}
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                    </a>
+                    {%endfor%}
+                </ul>
+                <a href=""><button class="btn__AddEvent">Добавить мероприятие</button></a>
+            </div>
+        </section>
+        <section id="News" class="section__news">
+            <div class="container">
+                <h2>Новости</h2>
+                <ul class="news__list">
+                    {%for article in articles%}
+                    <a href="/news/{{article.id}}">
+                            <li class="news__item">
+                                {%if article.image%}
+                                <div class="news__img">
+                                    <img src="{{article.image.url}}" alt="member-image">
+                                </div>
+                                {%endif%}
+                                <p>{{article.title}}</p>
+                                <span>By {{article.publication}}</span>
+                            </li>
+                    </a>
+                    {%endfor%}
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer__left"></div>
+        <div class="footer__right"></div>
+    </footer>
+</body>
+</html>
+{% endblock %}

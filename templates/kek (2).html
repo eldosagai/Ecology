@@ -1,0 +1,27 @@
+{%block content%}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for event in events%}
+    <h1>{{event.name}}</h1>
+    <h2>{{event.organization}}</h2>
+    <h2>{{event.type}}</h2>
+    <h2>{{event.place}}</h2>
+    <h2>{{event.text}}</h2>
+    <h2>{{event.date}}</h2>
+        {%for image in images%}
+            {%if image.event == event %}
+                <img src="{{image.image.url}}">
+            {%endif%}
+        {%endfor%}
+    {% endfor %}
+</body>
+</html>
+{%endblock%}

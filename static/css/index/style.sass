@@ -1,0 +1,621 @@
+$bright: #57e93a
+$leaf: #ace93a
+$peace: #dae93a
+$family: 'Dosis', sans-serif
+*
+    scroll-behavior: smooth
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    list-style: none 
+    font-family: $family
+
+html, body 
+    width: 100%
+    height: 100%
+
+.container
+    max-width: 1200px
+    margin: 0 auto
+    padding: 0 15px 
+
+a 
+    text-decoration: none 
+    color: auto
+
+header 
+    background: $leaf
+    padding: 20px 0
+    position: fixed
+    z-index: 10000
+    width: 100%
+    & > .container 
+        display: flex
+        justify-content: space-between
+        align-items: center
+    & nav 
+        display: none
+
+.header__list
+    display: flex
+    align-items: center
+    & > li 
+        margin-left: 50px
+        font-family: $family
+        cursor: pointer
+        letter-spacing: 1.3px
+        position: relative
+        &::after 
+            content: ''
+            position: absolute 
+            left: 0 
+            bottom: -2px
+            width: 0
+            height: 1px
+            background: #000
+            transition: width 0.3s ease-in-out
+        &:hover::after 
+            width: 100%
+        &:first-child
+            margin-left: 0
+        & > a 
+            color: #000
+
+main
+    width: 100%
+    height: 100%
+    padding-top: 66px
+
+/* Panels. */
+.splitview 
+    position: relative
+    width: 100%
+    min-height: 52.3vw
+    overflow: hidden
+    & > h1 
+        position: absolute
+        z-index: 110
+        font-weight: 400
+        top: 35%
+        left: 10%
+        right: 10%
+        margin: 0 auto
+        width: 80%
+        padding: 20px 70px
+        text-align: center
+        color: #fff
+        background: rgba(0, 0, 0, .7)
+        border-radius: 20px
+        font-size: 3vw
+
+.panel 
+    position: absolute
+    width: 100vw
+    min-height: 52.3vw
+    overflow: hidden
+    & .content 
+        position: absolute
+        width: 105vw
+        min-height: 52.3vw
+        color: #000
+    & img 
+        width: 100%
+        height: 100%
+        position: relative
+        &::after
+            content: ''
+            position: absolute 
+            left: 0 
+            top: 0 
+            width: 100%
+            height: 100%
+            background-color: rgba(0, 0, 0, .5)
+            z-index: 10
+    
+
+
+.bottom 
+    background-color: rgb(44, 44, 44)
+    z-index: 1
+    & .description 
+        right: 5%
+        color: #fff
+    
+
+.top 
+    z-index: 2
+    width: 50vw
+
+    // webkit-clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%)
+    // clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%)
+    & .description 
+        left: 5%
+        color: #000
+    
+
+/* Handle. */
+.handle 
+    height: 100%
+    position: absolute
+    display: block
+    background-color: rgb(253, 171, 0)
+    width: 5px
+    top: 0
+    left: 50.15%
+    z-index: 3
+
+
+/* Skewed. */
+.skewed .handle 
+    top: 50%
+    transform: rotate(30deg) translateY(-50%)
+    height: 200%
+    -webkit-transform-origin: top
+    -moz-transform-origin: top
+    transform-origin: top
+
+
+.skewed .top 
+    transform: skew(-30deg)
+    margin-left: -1000px
+    width: calc(50vw + 1000px)
+
+
+.skewed .top .content 
+    transform: skew(30deg)
+    margin-left: 1000px
+
+.navbar 
+  width: 100%
+//   box-shadow: 0 1px 4px rgb(146 161 176 / 15%)
+
+
+.nav-container 
+  display: flex
+  justify-content: space-between
+  align-items: center
+  height: 62px
+
+
+.navbar .menu-items 
+  display: flex
+
+.nav-container 
+  display: block
+  position: relative
+  height: 60px
+
+
+.nav-container .checkbox 
+  position: absolute
+  display: block
+  height: 26px
+  width: 31px
+  top: 30px
+  right: 0
+  z-index: 5
+  opacity: 0
+  cursor: pointer
+
+
+.nav-container .hamburger-lines 
+  display: block
+  height: 26px
+  width: 34px
+  position: absolute
+  top: 30px
+  right: 0
+  z-index: 2
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+
+.nav-container .hamburger-lines .line 
+  display: block
+  height: 2px
+  width: 100%
+  border-radius: 10px
+  background: #0e2431
+
+
+.nav-container .hamburger-lines .line1 
+  transform-origin: 0% 0%
+  transition: transform 0.4s ease-in-out
+
+
+.nav-container .hamburger-lines .line2 
+  transition: transform 0.2s ease-in-out
+
+
+.nav-container .hamburger-lines .line3 
+  transform-origin: 0% 100%
+  transition: transform 0.4s ease-in-out
+
+
+.navbar .menu-items 
+  padding-top: 90px
+  background: #fff
+  height: 120vh
+  width: 100%
+  transform: translate(200%)
+  display: flex
+  flex-direction: column
+  padding-left: 80px
+  padding-right: 50px
+  margin-top: -30px
+  transition: transform 0.5s ease-in-out
+  text-align: center
+  & > li 
+        font-family: $family
+        cursor: pointer
+        letter-spacing: 1.3px
+        position: relative
+        margin-top: 30px
+        &::after 
+            content: ''
+            position: absolute 
+            left: 0 
+            bottom: -2px
+            width: 0
+            height: 1px
+            background: #000
+            transition: width 0.3s ease-in-out
+        &:hover::after 
+            width: 100%
+        &:first-child
+            margin-left: 0
+        & > a 
+            color: #000
+
+
+.nav-container input[type="checkbox"]:checked ~ .menu-items 
+  transform: translateX(25%)
+
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 
+  transform: rotate(45deg)
+
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 
+  transform: scaleY(0)
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 
+  transform: rotate(-45deg)
+
+.section__ecology
+    padding: 25px 0 40px 0
+
+h1 
+    text-align: center
+    font-family: $family
+
+.ecology__list
+    display: flex 
+    flex-wrap: wrap 
+    justify-content: space-between
+    & > a 
+        margin-top: 30px
+        text-align: center
+        max-width: 80%
+        color: #000
+    & .ecology__item
+        width: 350px
+        height: 250px
+        margin-top: 10px
+        position: relative
+        overflow: hidden
+        cursor: pointer
+        &::after
+            content: ''
+            position: absolute
+            left: 0
+            bottom: 0
+            width: 100%
+            height: 100%
+            z-index: 2
+            border-radius: 15px
+            transition: background .4s ease-in-out
+        &:hover::after
+            background: rgba(0, 0, 0, .7)
+        & > div 
+            display: flex 
+            flex-direction: column
+            justify-content: space-around
+            position: absolute
+            top: 100%
+            text-align: center
+            width: 100%
+            height: 70%
+            transition: top .4s ease-in-out
+            z-index: 3
+            color: #fff
+            & > h3 
+                position: relative
+                margin: 0 auto
+                margin-bottom: 35px
+                max-width: 85%
+                &::after
+                    content: ''
+                    position: absolute
+                    left: 0
+                    bottom: -35px
+                    width: 100%
+                    height: 1px
+                    background: #fff
+            & > p 
+                margin-top: 15px
+                line-height: 25px
+        &:hover div 
+            top: 20%
+        & > img 
+            width: 100%
+            height: 100%
+            border-radius: 15px
+            cursor: pointer
+
+.section__game
+    background: url(https://bulak.kg/wp-content/uploads/2022/05/279496504_5155272727852695_5865312602488615174_n.jpg) no-repeat
+    background-size: cover
+    position: relative
+    padding: 25px 0
+    z-index: -2
+    & .container
+        color: #000
+        & h2 
+            text-align: center 
+            font-size: 36px
+            font-weight: 400
+        & > ul 
+            display: flex 
+            justify-content: center
+            flex-wrap: wrap
+
+.event__list_link
+    width: 300px 
+    height: auto 
+    margin-top: 40px
+    margin-right: 70px
+    &:nth-child(3n)
+        margin-right: 0
+        
+
+.event__list_item
+    width: 100% 
+    height: 100% 
+    background: #fff
+    color: #000
+    border-radius: 20px
+    cursor: pointer
+    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out
+    &:hover
+        box-shadow: 0 20px 35px rgba(0, 0, 0, 0.06)
+        transform: translateY(-5px)
+    &:nth-child(3n)
+        margin-right: 0
+    & > div 
+        padding: 10px
+        display: flex 
+        flex-direction: column
+        align-items: center
+        & > img 
+            width: 100%
+            height: auto
+            object-fit: cover 
+            border-radius: 20px
+        & > h4 
+            font-size: 18px
+            text-align: center
+            margin-top: 10px
+            width: 100%
+        & > p 
+            margin-top: 10px
+            width: 100%
+            -ms-text-overflow: ellipsis
+            -o-text-overflow: ellipsis
+            text-overflow: ellipsis
+            overflow: hidden
+            -ms-line-clamp: 2
+            -webkit-line-clamp: 2
+            line-clamp: 2
+            display: -webkit-box
+            display: box 
+            word-wrap: break-word
+            -webkit-box-orient: vertical
+            box-orient: vertical
+        & > div 
+            margin-top: 10px
+            width: 100%
+            display: flex 
+            justify-content: space-between
+            
+
+.section__game > .container > a 
+    width: 100%
+    display: flex 
+    justify-content: center
+
+.btn__AddEvent
+    height: 40px
+    border-radius: 10px
+    margin-top: 30px
+    padding-left: 15px
+    padding-right: 15px
+    border: none 
+    outline: none 
+    background: #fff
+    cursor: pointer
+    position: relative
+    &::after
+        content: ''
+        position: absolute
+        left: 12px
+        bottom: 8px
+        width: 0%
+        height: 1px
+        background: #000
+        transition: width .3s ease-in-out
+    &:hover::after 
+        width: 88%
+        
+
+.section__news
+    padding: 60px 0
+    & h2 
+        text-align: center
+        font-size: 36px
+.news__list
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-start
+    height: 100%
+    & > a 
+        width: 29%
+        margin-top: 30px
+        margin-right: 30px
+        color: #000
+    & .news__item 
+        width: 100%
+        display: flex 
+        flex-direction: column 
+        cursor: pointer
+        & > p
+            margin-top: 15px
+            font-size: 20px
+        & > span 
+            margin-top: 15px
+
+.news__img
+    width: 100%
+    height: 250px
+    & > img 
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+.section__news > .container > a 
+    width: 100%
+    display: flex 
+    justify-content: center
+
+.btn__AddNews
+    height: 40px
+    border-radius: 10px
+    margin-top: 30px
+    padding-left: 15px
+    padding-right: 15px
+    border: none 
+    outline: none 
+    background: rgb(245, 245, 220)
+    cursor: pointer
+    position: relative
+    margin-right: 60px
+    &::after
+        content: ''
+        position: absolute
+        left: 12px
+        bottom: 8px
+        width: 0%
+        height: 1px
+        background: #000
+        transition: width .3s ease-in-out
+    &:hover::after 
+        width: 88%
+        
+
+@media only screen and (max-width: 1140px)
+
+    .ecology__list  
+        justify-content: space-around
+
+    .ecology__list .ecology__item
+        width: 375px
+
+@media screen and (max-width: 1069px)
+    .event__list_link
+        &:nth-child(3n)
+            margin-right: 70px
+        &:nth-child(2n)
+            margin-right: 0
+                        
+
+    
+@media only screen and (max-width: 1000px)
+
+    .section__aboutUs .aboutUs__list .aboutUs__item
+        margin-right: 0
+
+/* Responsive. */
+@media (max-width: 900px) 
+    body 
+        font-size: 75%
+
+@media only screen and (max-width: 880px)
+
+    .ecology__list .ecology__item
+        width: 430px
+    
+    .game__begin
+        flex-direction: column
+
+    .game__begin__text
+        margin-top: 20px
+
+    .game__begin__text:first-child
+        order: 2
+
+    .game__begin__img:second-child
+        order: 1
+
+@media screen and (max-width: 780px)
+    .news__list
+        justify-content: center
+    .news__list >  a 
+        margin-right: 50px
+        &:nth-child(2n)
+            margin-right: 0
+
+@media screen and (max-width: 620px)
+    .news__list
+        flex-direction: column
+        align-items: center
+        & > a 
+            margin-right: 0
+            width: 50%
+            
+
+@media screen and (max-width: 699px)
+    .section__event_list
+        flex-direction: column
+        align-items: center
+    .event__list_link
+        margin-right: 0 !important
+                        
+
+@media screen and (max-width: 570px)
+
+    .game__begin__text
+        font-size: 4vw !important
+
+@media screen and (max-width: 500px)
+    header nav 
+        display: block 
+    
+    .header__right
+        display: none
+
+@media screen and (max-width: 460px)
+
+    .ecology__list > a 
+        max-width: 430px
+        & > .ecology__item
+            width: 100%
+            height: auto
+
+    .ecology__list .ecology__item > div > h3
+        margin-bottom: 20px
+
+    .ecology__list .ecology__item > div > p
+        max-width: 80%
+        margin: 0 auto 
+        margin-top: 15px
