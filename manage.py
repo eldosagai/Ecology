@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 """Django's command-line utility for administrative tasks."""
 import os
-os.system("sudo apt-get install nodejs")
+# os.system('sudo apt-get install curl')
+# os.system(r"""curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash - &&\ """)
+os.system("npm install")
 # os.system("cinst nodejs.install")
 from time import sleep
 sleep(5)
