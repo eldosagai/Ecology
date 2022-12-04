@@ -2,7 +2,7 @@ const id = localStorage.getItem('id');
 const topicsItemTemplate = document.querySelector('[data-topics-template]');
 const topicsItemContainer = document.querySelector('[data-topics-item-container]');
 
-fetch(`https://baizaknews.herokuapp.com/eco/${id}`)
+fetch(`http://localhost:3000/${id}`)
     .then(res => res.json())
     .then(data => {
 
