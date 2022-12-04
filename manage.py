@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 """Django's command-line utility for administrative tasks."""
 import os
+os.system("npx json-server --watch db/idForEcoHackaton/db.json")
 import sys
 
 
