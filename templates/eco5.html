@@ -1,0 +1,98 @@
+{%load static%}
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/normalize.css'%}">
+    <link rel="stylesheet" href="{% static 'css/eco/style.css'%}">
+    <link rel="icon"
+    href="{% static 'images/free-icon-pinecone-66715.png'%}"
+    sizes="32x32"
+    type="image/png">
+    <script src="{% static 'js/eco.js' %}" defer></script>
+    <title>Shishka</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header__left">
+                <a href="{%url 'main'%}"><img src="{% static 'images/free-icon-pinecone-66715.png'%}" alt="logo-image"></a>
+            </div>
+            <div class="header__right">
+                <ul class="header__list">
+                    {% comment %} <li class="header__item"><a href="{%url 'articles'%}">Новости</a></li> {% endcomment %}
+                    <li class="header__item"><a href="#placeEcology">Экология</a></li>
+                    {% comment %} <li class="header__item"><a href="#game">Игра</a></li>
+                    <li class="header__item"><a href="#aboutUs">О нас</a></li> {% endcomment %}
+                </ul>
+            </div>
+            <nav>
+                <div class="navbar">
+                <div class="container nav-container">
+                    <input class="checkbox" type="checkbox" name="" id="" />
+                    <div class="hamburger-lines">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </div>  
+                    <div class="menu-items">
+                        {% comment %} <li class="header__item"><a href="#placeNews">Новости</a></li> {% endcomment %}
+                        <li class="header__item"><a href="#placeEcology">Экология</a></li>
+                        {% comment %} <li class="header__item"><a href="#game">Игра</a></li>
+                        <li class="header__item"><a href="#aboutUs">О нас</a></li> {% endcomment %}
+                    </div>
+                </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="main__header">
+                <h1 data-title>Нехватка поливной воды</h1>
+                <p data-p-introduction>Нехватка поливной воды происходит из-за отсутствия севооборота сельхозкультур. После того, как распался СССР, в Кыргызстане начали создавать мелкие крестьянские хозяйства, они разделили по 1-2 гектара. К сожалению каждый сажает, как ему захочется, и это приводит к тому что какая-то определенная территория требует воды больше, чем другой. Например, перец требует воды в 10 раз больше, чем клевер или капуста. И это является одной из причин почему не хватает поливной воды.</p>
+            </div>
+            <div class="main__body" style="display: flex; flex-direction: column;" data-topics-item-container>
+                    <div>
+                        <div>
+                            <img  
+                                src="https://www.ktrk.kg/img/thumbnail/594541623843640_big.jpg" 
+                                alt="image" 
+                                data-img
+                            >
+                        </div>
+                        <div>
+                            <h3 data-title>Как влияет нехватка поливной воды на село Байзак?</h3>
+                            <p data-p>Нехватка поливной воды приводит к  малоурожайности, на огородах овощи и фрукты заболевают. В айыльном аймаке Байзак работает ассоциация водовользователей (АВП – СПА) где руководителем является мужчина и при АВП имеется наблюдательный совет, где 7 мужчин и 2 женщины. Соответственно, отмечается отсутствие равного доступа мужчин и женщин к системам принятия решений по вопросам воды на всех уровнях. В случае сохранения такой тенденции положение женщин в а/а Байзак будет еще более усугбляться.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <img  
+                                src="https://sputnik.kz/img/07e5/07/08/17556218_0:67:1280:787_1920x0_80_0_0_9c64f5eae4974ca8af5cc622d327953d.jpg.webp" 
+                                alt="image" 
+                                data-img
+                            >
+                        </div>
+                        <div>
+                            <h3 data-title>Как справляется село Байзак с данной проблемой?</h3>
+                            <p data-p>Строительство БСР в Байзакском селе (практикуется в соседнем селе). Также организовывают очередь на полив поливной воды и переходят на капельное орошение. Используют интенсивные сорта сельхоз культур для минимизация использования воды.</p>
+                        </div>
+                    </div>
+            </div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/DDxbXKGaXfg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </main>
+    <footer>
+        <div class="footer__left"></div>
+        <div class="footer__right"></div>
+    </footer>
+</body>
+</html>
+{%endblock%}

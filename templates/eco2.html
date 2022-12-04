@@ -1,0 +1,98 @@
+{%load static%}
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/normalize.css'%}">
+    <link rel="stylesheet" href="{% static 'css/eco/style.css'%}">
+    <link rel="icon"
+    href="{% static 'images/free-icon-pinecone-66715.png'%}"
+    sizes="32x32"
+    type="image/png">
+    <script src="{% static 'js/eco.js' %}" defer></script>
+    <title>Shishka</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header__left">
+                <a href="{%url 'main'%}"><img src="{% static 'images/free-icon-pinecone-66715.png'%}" alt="logo-image"></a>
+            </div>
+            <div class="header__right">
+                <ul class="header__list">
+                    {% comment %} <li class="header__item"><a href="{%url 'articles'%}">Новости</a></li> {% endcomment %}
+                    <li class="header__item"><a href="#placeEcology">Экология</a></li>
+                    {% comment %} <li class="header__item"><a href="#game">Игра</a></li>
+                    <li class="header__item"><a href="#aboutUs">О нас</a></li> {% endcomment %}
+                </ul>
+            </div>
+            <nav>
+                <div class="navbar">
+                <div class="container nav-container">
+                    <input class="checkbox" type="checkbox" name="" id="" />
+                    <div class="hamburger-lines">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </div>  
+                    <div class="menu-items">
+                        {% comment %} <li class="header__item"><a href="#placeNews">Новости</a></li> {% endcomment %}
+                        <li class="header__item"><a href="#placeEcology">Экология</a></li>
+                        {% comment %} <li class="header__item"><a href="#game">Игра</a></li>
+                        <li class="header__item"><a href="#aboutUs">О нас</a></li> {% endcomment %}
+                    </div>
+                </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="main__header">
+                <h1 data-title>Повышение/колебание температуры</h1>
+                <p data-p-introduction>На сегодняшний, глобальное потепление приносит много проблем всему миру. Кыргызстан ощутил на себе это в 2021 году. Аномальная жара уменьшила урожай, а цены на основные продукты выросли в несколько раз. Все это не может быть проигнорировано. Ведь данная проблема затрагивает как и экономическую, так и социальную сферу Кыргызстана.</p>
+            </div>
+            <div class="main__body" style="display: flex; flex-direction: column;" data-topics-item-container>
+                    <div>
+                        <div>
+                            <img  
+                                src="https://phototass1.cdnvideo.ru/width/1200_4ce85301/tass/m2/uploads/i/20151127/4139012.jpg" 
+                                alt="image" 
+                                data-img
+                            >
+                        </div>
+                        <div>
+                            <h3 data-title>Повышение/колебание температуры в селе Байзак</h3>
+                            <p data-p>Колебания температуры как следствие нехватки поливной воды привело к снижению уражайностина 70 %. Из за высоких температур идет снижение влаги и высокая испоряемость, что негативно оражается на уражае.  Повышення разница ведет к увеличение скорости ветров и оразование суховеев. Что приводит к дополнительной нагрузки для ведения домашнего хозяйства. В случаи отсутствия мужчины дома очередность за поливной водой не соблюдается в отношении женщин, престарелых и ЛОВЗ. В доступе к поливной воде возможности не у всех одинаковые и в основном страдают от этого именно уязвимая группа людей с ограниченными возможностями как в человеческих ресурсах так и в возможностях здоровья. </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <img  
+                                src="https://vlast.kz/media/pages/ml/1552547161zux44_1600x900.jpg" 
+                                alt="image" 
+                                data-img
+                            >
+                        </div>
+                        <div>
+                            <h3 data-title>Как село Байзак справляется с данной проблемой?</h3>
+                            <p data-p>Идет процес адаптации к организации режима нахождения людей в полях (утренне и вечернее время). Постепенно женщины переходят на швеи –надомницы получают заказы с Бишкека.Ведется работа по испльзованию биогумуса.</p>
+                        </div>
+                    </div>
+            </div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/DDxbXKGaXfg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </main>
+    <footer>
+        <div class="footer__left"></div>
+        <div class="footer__right"></div>
+    </footer>
+</body>
+</html>
+{%endblock%}

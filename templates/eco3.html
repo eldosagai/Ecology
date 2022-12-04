@@ -1,0 +1,98 @@
+{%load static%}
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/normalize.css'%}">
+    <link rel="stylesheet" href="{% static 'css/eco/style.css'%}">
+    <link rel="icon"
+    href="{% static 'images/free-icon-pinecone-66715.png'%}"
+    sizes="32x32"
+    type="image/png">
+    <script src="{% static 'js/eco.js' %}" defer></script>
+    <title>Shishka</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header__left">
+                <a href="{%url 'main'%}"><img src="{% static 'images/free-icon-pinecone-66715.png'%}" alt="logo-image"></a>
+            </div>
+            <div class="header__right">
+                <ul class="header__list">
+                    {% comment %} <li class="header__item"><a href="{%url 'articles'%}">Новости</a></li> {% endcomment %}
+                    <li class="header__item"><a href="#placeEcology">Экология</a></li>
+                    {% comment %} <li class="header__item"><a href="#game">Игра</a></li>
+                    <li class="header__item"><a href="#aboutUs">О нас</a></li> {% endcomment %}
+                </ul>
+            </div>
+            <nav>
+                <div class="navbar">
+                <div class="container nav-container">
+                    <input class="checkbox" type="checkbox" name="" id="" />
+                    <div class="hamburger-lines">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </div>  
+                    <div class="menu-items">
+                        {% comment %} <li class="header__item"><a href="#placeNews">Новости</a></li> {% endcomment %}
+                        <li class="header__item"><a href="#placeEcology">Экология</a></li>
+                        {% comment %} <li class="header__item"><a href="#game">Игра</a></li>
+                        <li class="header__item"><a href="#aboutUs">О нас</a></li> {% endcomment %}
+                    </div>
+                </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="main__header">
+                <h1 data-title>Сокращение осадков</h1>
+                <p data-p-introduction>Сокращние осадков привело к большим экономическим проблемам. Дання проблема очень тесно связана с засухой и повышением температуры, поэтому аналогично повлияла на село Байзак: нехватка воды, слабый урожай, подорожание цен на продукты, отрицательное влияние на здоровье и так далее.</p>
+            </div>
+            <div class="main__body" style="display: flex; flex-direction: column;" data-topics-item-container>
+                    <div>
+                        <div>
+                            <img  
+                                src="https://sputnik.kg/img/104274/34/1042743458_0:330:6016:3714_600x0_80_0_0_36012f61fd9d69c39e33a8984f5a98ca.jpg.webp" 
+                                alt="image" 
+                                data-img
+                            >
+                        </div>
+                        <div>
+                            <h3 data-title>Влияние сокращение осадков на село Байзак</h3>
+                            <p data-p>Сильная запыленность территории, засушливость почвы.  Нехватка воды увеличивает нагрузку на женщин. Сокращение урожайности пшеницы, низкий урожай пастбищных трав, чрезмерно большое количество домашних животных на пастбищах, привело к оскуднению биологического разнообразия на пастбищах. Ухудшается состояние здоровья у ЛОВЗ.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <img  
+                                src="https://elorda.info/cache/imagine/1200/uploads/news/2022/10/63494ee3b4965565022626.webp" 
+                                alt="image" 
+                                data-img
+                            >
+                        </div>
+                        <div>
+                            <h3 data-title>Как справляются с данной проблемой в селе Байзак?</h3>
+                            <p data-p>Предлагают построить мини водохранилища для аккумуляции влаги и воды. Многие экспериментируют, сажая различные культуры у себя в огороде. Например: сельчане научились выращивать и использовать сорта томатов, огурцов, брокколи, моркови, свеклы, фасоли.</p>
+                        </div>
+                    </div>
+            </div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/DDxbXKGaXfg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </main>
+    <footer>
+        <div class="footer__left"></div>
+        <div class="footer__right"></div>
+    </footer>
+</body>
+</html>
+{%endblock%}

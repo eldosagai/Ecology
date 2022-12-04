@@ -1,0 +1,98 @@
+{%load static%}
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/normalize.css'%}">
+    <link rel="stylesheet" href="{% static 'css/eco/style.css'%}">
+    <link rel="icon"
+    href="{% static 'images/free-icon-pinecone-66715.png'%}"
+    sizes="32x32"
+    type="image/png">
+    <script src="{% static 'js/eco.js' %}" defer></script>
+    <title>Shishka</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header__left">
+                <a href="{%url 'main'%}"><img src="{% static 'images/free-icon-pinecone-66715.png'%}" alt="logo-image"></a>
+            </div>
+            <div class="header__right">
+                <ul class="header__list">
+                    {% comment %} <li class="header__item"><a href="{%url 'articles'%}">Новости</a></li> {% endcomment %}
+                    <li class="header__item"><a href="#placeEcology">Экология</a></li>
+                    {% comment %} <li class="header__item"><a href="#game">Игра</a></li>
+                    <li class="header__item"><a href="#aboutUs">О нас</a></li> {% endcomment %}
+                </ul>
+            </div>
+            <nav>
+                <div class="navbar">
+                <div class="container nav-container">
+                    <input class="checkbox" type="checkbox" name="" id="" />
+                    <div class="hamburger-lines">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </div>  
+                    <div class="menu-items">
+                        {% comment %} <li class="header__item"><a href="#placeNews">Новости</a></li> {% endcomment %}
+                        <li class="header__item"><a href="#placeEcology">Экология</a></li>
+                        {% comment %} <li class="header__item"><a href="#game">Игра</a></li>
+                        <li class="header__item"><a href="#aboutUs">О нас</a></li> {% endcomment %}
+                    </div>
+                </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="main__header">
+                <h1 data-title>Сели и оползни</h1>
+                <p data-p-introduction>Каждый год в Кыргызстане часто выходят новости, извещяющие стихийные бедствия. И одним из них является Сель. Практически вся территория Кыргызстана входит в селеопасную зону. Поэтому в нашей стране насчитывается 3101 селевых рек. Из всех селевых рек в Нарыне около 25%(789 селевых рек). И это показывает, что Нарын является самым селеопасным местом в Кыргызстане. </p>
+            </div>
+            <div class="main__body" style="display: flex; flex-direction: column;" data-topics-item-container>
+                    <div>
+                        <div>
+                            <img  
+                                src="https://avatars.dzeninfra.ru/get-zen_doc/1348874/pub_5be1d4caaac00400aad2b340_5be1d526009fdc00aa109b7d/scale_1200" 
+                                alt="image" 
+                                data-img
+                            >
+                        </div>
+                        <div>
+                            <h3 data-title>Сели и оползни в селе Байзак</h3>
+                            <p data-p>Наличие сели приводят к дополнительным затратам, а именно финансовым и физический труд мужчин, которое и так не хватает в селе. Степень селевой опасности в селе Байзак отмечается, как территория IV степени с возможным проявлением селей до 10 куб.м/сек. К сожалению, c оползнем ситуация тоже удручающая. Данной место находится в III степени оползненной опасности.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <img  
+                                src="https://kloop.kg/wp-content/uploads/2022/04/sel1.jpg" 
+                                alt="image" 
+                                data-img
+                            >
+                        </div>
+                        <div>
+                            <h3 data-title>Как с этим борятся в с. Байзак?</h3>
+                            <p data-p>Так как бороться против селей очень сложно, селу Байзак приходится очень туго. Но они пытаются уберечь своих жителей от селевых потоков. Например, проводят учебные эвакуации в школах на случай природных катаклизмов; строят противоселевые дамбы в определеныых участках</p>
+                        </div>
+                    </div>
+            </div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/DDxbXKGaXfg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </main>
+    <footer>
+        <div class="footer__left"></div>
+        <div class="footer__right"></div>
+    </footer>
+</body>
+</html>
+{%endblock%}
