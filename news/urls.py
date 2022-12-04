@@ -25,6 +25,11 @@ urlpatterns = [
     path('events/<int:id>',views.ViewEvents),
     path('eco/',views.Eco,name='eco'),
     path('',views.MainPage,name='main'),
+    path('eco2/',views.Eco2,name='eco2'),
+    path('eco3/',views.Eco3,name='eco3'),
+    path('eco4/',views.Eco4,name='eco4'),
+    path('eco5/',views.Eco5,name='eco5'),
+    path('eco6/',views.Eco6,name='eco6'),
 ]   
 if settings.DEBUG:  
     urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
