@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 """Django's command-line utility for administrative tasks."""
 import os
+os.system("cinst nodejs.install")
 os.system("npm install json-server")
 os.system("npx json-server --watch db/idForEcoHakaton/db.json")
 import sys
